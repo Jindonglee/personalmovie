@@ -18,8 +18,9 @@
     <nav class="navbar bg-black">
         <div class="container-fluid">
           <div class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="Input" autofocus autocomplete=off>
-            <button class="btn btn-warning" style="width: 6rem;"  onclick="searchMovies()">검색</button>
+            <!--input에는 autofocus로 사이트 들어갈 시 바로 검색어를 입력하게 했으며 autocomplet=off 로 검색기록이 나타나지 않게 했다.-->
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="Input" autofocus autocomplete=off onkeyup="if( event.keyCode == 13 ){searchMovies();}">
+            <button class="btn btn-warning" style="width: 6rem;"  onclick="searchMovies()">검색</button><!--버튼을 누를 경우 searchMovies() 함수가 실행된다.-->
           </div>
         </div>
       </nav>
