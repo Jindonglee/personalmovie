@@ -54,11 +54,15 @@
               id="Input"
               autofocus
               autocomplete="off"
-              onkeyup="if( event.keyCode == 13 ){searchMovies();}"
-              onclick="searchMovies()"
             />
             <!--event.keyCode로 enter를 눌러도 검색결과가 나타나게끔했다. searchMovies로 동작한다.-->
-            <button class="btn btn-warning" type="submit" style="width: 6rem">
+            <button
+              class="btn btn-warning"
+              type="submit"
+              style="width: 6rem"
+              onkeyup="if( event.keyCode == 13 ){searchMovies();}"
+              onclick="searchMovies()"
+            >
               검색
             </button>
           </form>
