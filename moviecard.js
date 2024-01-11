@@ -1,4 +1,4 @@
-let apiKey = config.apikey;
+const apiKey = config.apikey;
 
 const popularUrl = `https://api.themoviedb.org/3/movie/popular?language=ko-KR&page=1&api_key=${apiKey}`;
 const topratedUrl = `https://api.themoviedb.org/3/movie/top_rated?language=ko-KR&page=1&api_key=${apiKey}`;
@@ -43,13 +43,13 @@ async function showCards() {
   const movies = await movieFetch(popularUrl);
   makeCards(movies);
 }
-async function topRatedCards() {
-  const movies = await movieFetch(topratedUrl);
-  makeCards(movies);
-}
-async function upComingCards() {
-  const movies = await movieFetch(upcomingUrl);
-  makeCards(movies);
-}
+// async function topRatedCards() {
+//   const movies = await movieFetch(topratedUrl);
+//   makeCards(movies);
+// }
+// async function upComingCards() {
+//   const movies = await movieFetch(upcomingUrl);
+//   makeCards(movies);
+// }
 
 showCards(); // showCards 함수를 호출합니다.

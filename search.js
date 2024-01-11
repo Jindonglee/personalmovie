@@ -1,5 +1,6 @@
 // 검색
-function searchMovies() {
+function searchMovies(event) {
+  event.preventDefault();
   const searchInput = document.getElementById("Input");
   const searchValue = searchInput.value.toLowerCase();
 
@@ -15,7 +16,7 @@ function searchMovies() {
       if (movies.length === 0) {
         alert("검색결과가 없습니다!");
       } else {
-        return movies.filter(movie => movie.adult === false); //성인 결과가 안나오도록
+        return movies;
       }
     })
     .then(filteredMovies => {
