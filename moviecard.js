@@ -43,13 +43,13 @@ async function showCards() {
   const movies = await movieFetch(popularUrl);
   makeCards(movies);
 }
-// async function topRatedCards() {
-//   const movies = await movieFetch(topratedUrl);
-//   makeCards(movies);
-// }
-// async function upComingCards() {
-//   const movies = await movieFetch(upcomingUrl);
-//   makeCards(movies);
-// }
+async function topRatedCards() {
+  const movies = await movieFetch(topratedUrl);
+  makeCards(movies);
+}
+async function upComingCards() {
+  const movies = await movieFetch(upcomingUrl);
+  makeCards(movies);
+}
 
 showCards(); // showCards 함수를 호출합니다.
